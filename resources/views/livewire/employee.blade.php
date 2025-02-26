@@ -41,7 +41,14 @@
                 </div>
                 <div class="mb-3 row">
                     <label class="col-sm-2 col-form-label"></label>
-                    <div class="col-sm-10"><button type="button" class="btn btn-primary" name="submit" wire:click="store()">SIMPAN</button>
+                    <div class="col-sm-10">
+                        @if ($updateData == false)
+                        <button type="button" class="btn btn-primary" name="submit" wire:click="store()">SIMPAN
+                        </button>
+                        @else
+                        <button type="button" class="btn btn-primary" name="submit" wire:click="update()">UPDATE
+                        </button>
+                        @endif
                     </div>
                 </div>
             </form>
